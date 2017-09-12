@@ -1,0 +1,130 @@
+/*Custom styles*/
+
+@-webkit-keyframes Gradient {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+
+@-moz-keyframes Gradient {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+
+@keyframes Gradient { 
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+
+body {
+  padding: 6%;
+  background: linear-gradient(49deg, #e48a8a, #d7b1b1, #d7b1d7, #e4b68a, #e48add, #e48a8a, #ffffff);
+  background-size: 1400% 1400%;
+  -webkit-animation: Gradient 53s ease infinite;
+  -moz-animation: Gradient 53s ease infinite;
+  animation: Gradient 53s ease infinite;
+}
+
+.my-4 {
+  margin: 0 !important;
+  font-size: 1.25rem;
+  padding: 0 0 3% 0;
+}
+
+.navbar-transparent .navbar-toggler {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-transparent .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.bg-inverse {
+  background-color: blue;
+}
+ 
+.bg-transparent {
+  background-color: transparent;
+}
+
+    position: absolute;
+    /* right: 0; */
+    bottom: 10px;
+    left: 50%;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: -30%;
+    list-style: none;
+    width: 60%;
+
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    background-color: blanchedalmond;
+    margin: 0px;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: blanchedalmond;
+    border-image: initial;
+    border-radius: 10px;
+}
+
+.card {
+  border-radius: 0;
+  border: 0;
+  background-color: transparent;
+}
+.modal-content {
+  border-radius: 0;
+}
+
+/*Body border styling*/
+#top, #bottom, #left, #right {
+  background: #a5ebff;
+  position: fixed;
+}
+#left, #right {		
+  top: 0; 
+  bottom: 0;
+  width: 15px;
+}
+
+#left { 
+  left: 0; 
+}
+
+#right { 
+  right: 0; 
+}
+	
+#top, #bottom {
+  left: 0; 
+  right: 0;
+  height: 15px;
+}
+
+#top { 
+  top: 0; 
+}
+
+#bottom { 
+  bottom: 0; 
+}
+
