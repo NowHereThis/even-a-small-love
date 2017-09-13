@@ -20,18 +20,27 @@
 
 body {
   padding: 6%;
+  align-items: center;
   background: linear-gradient(49deg, #e48a8a, #d7b1b1, #d7b1d7, #e4b68a, #e48add, #e48a8a, #ffffff);
   background-size: 1400% 1400%;
   -webkit-animation: Gradient 53s ease infinite;
   -moz-animation: Gradient 53s ease infinite;
   animation: Gradient 53s ease infinite;
+  
 }
 
-.my-4 {
-  margin: 0 !important;
-  font-size: 1.25rem;
-  padding: 0 0 3% 0;
+#headline {
+  width: 100%;
 }
+#wrapper {
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100%;
+  height: -webkit-fill-available;
+  height: -moz-available;
+}
+
+
 
 .navbar-transparent .navbar-toggler {
   color: rgba(0, 0, 0, 0.5);
@@ -49,20 +58,10 @@ body {
   background-color: transparent;
 }
 
-    position: absolute;
-    /* right: 0; */
-    bottom: 10px;
-    left: 50%;
-    z-index: 15;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    padding-left: 0;
-    margin-right: 15%;
-    margin-left: -30%;
-    list-style: none;
-    width: 60%;
+.carousel {
+  display: block;
+  margin: auto;
+}
 
 .carousel-indicators .active {
     width: 12px;
@@ -128,3 +127,6 @@ body {
   bottom: 0; 
 }
 
+#carouselContainer {
+  height: 100%
+}
