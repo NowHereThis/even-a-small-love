@@ -3,6 +3,7 @@ package*.*
 vendor/.DS_Store
 vendor/bootstrap/.DS_Store
 *.swp
+vendor/bootstrap/css/*.min.css
 .DS_Store
 vendor/bootstrap/js
 vendor/jquery
@@ -10,4 +11,3 @@ vendor/popper
 vendor/LICENSE
 vendor/bootstrap/css/bootstrap-grid.css
 vendor/bootstrap/css/bootstrap-reboot.css
-css
