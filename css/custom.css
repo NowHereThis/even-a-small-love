@@ -7,15 +7,13 @@ html {
 body {
     margin: 8% 4% 8% 4%;
     font-family: 'Josefin Sans', sans-serif;
-    background: linear-gradient(-45deg, #899DD9, #97C1EF, #CCBEF1, #7FAFE0);
+    background: linear-gradient(-45deg, #899DD9, #97C1EF, #CCBEF1, #d0b2e8);
     overflow-x: hidden;
     background-size: 400% 400%;
     -webkit-animation: Gradient 15s ease infinite;
     -moz-animation: Gradient 15s ease infinite;
     animation: Gradient 15s ease infinite;
 }
-
-
 
 ::-webkit-scrollbar {
     width: 12px;
@@ -66,6 +64,48 @@ body {
     }
 }
 
+a {
+	outline: none;
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	outline: none;
+}
+
+.nav-link a {
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.nav-link a::before {
+	color: transparent;
+	content: '♡';
+	text-shadow: 0 0 transparent;
+	font-size: .75em;
+	-webkit-transition: text-shadow 0.3s, color 0.3s;
+	-moz-transition: text-shadow 0.3s, color 0.3s;
+	transition: text-shadow 0.3s, color 0.3s;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+.nav-link a:hover::before,
+.nav-link a:focus::before {
+	color: #BB4DF6;
+	text-shadow: -20px 0 #BB4DF6;
+}
+
+.nav-link a:hover,
+.nav-link a:focus {
+    text-decoration: none;
+	color: #5272d3;
+}
+
 .sticky-top {
     top: 5%;
 }
@@ -83,12 +123,14 @@ h6 {
 }
 
 .top-buffer {
-    margin-top: 7%;
+    margin-top: 13%;
 }
 
 .md-buffer {
     margin-top: 5%;
 }
+
+/*Image classes*/
 
 .gallery-img {
     background-color: transparent;
@@ -98,14 +140,15 @@ h6 {
     align-self: flex-end;
 }
 
-/*Style for inner pages*/
-
 .inner-photo {
     display: block;
     margin: 0 auto;
     max-width: 100%;
     height: auto;
 }
+
+/*Style for inner pages*/
+
 
 .textbox-bar {
     display: block;
@@ -170,39 +213,6 @@ h6 {
     padding: 0 5px;
 }
 
-/*Form styles*/
-
-.form-control {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #FFF;
-
-}
-
-.form-control:focus {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #FFF;
-}
-
-
-.form-inline {
-    display: inline;
-    box-sizing: border-box;
-    background: transparent;
-    border: none;
-}
-
-textarea {
-    width: 100%;
-}
-
-/*Button Styles for Input*/
-
-.btn-primary {
-    background-color: #D9BDEF;
-}
-
 @media (min-width: 768px) {
     body {
         margin: 4%;
@@ -261,61 +271,34 @@ textarea {
 
 }
 
-/*Title animation
+/*Scrolling animations for new pages*/
 
-.title-letters {
-  color: transparent;
-  line-height: 1.5;
-}
-
-.title-letters span {
-  display: inline-block;
-  animation: move 2s ease-in-out infinite;
+.move-to-left-fade {
+	-webkit-animation: moveToLeftFade .7s ease both;
+	animation: moveToLeftFade .7s ease both;
 }
 
-.title-letters span:nth-child(2) {
-    animation-delay: 0.5s;
+.move-to-right-fade {
+	-webkit-animation: moveToRightFade .7s ease both;
+	animation: moveToRightFade .7s ease both;
 }
 
-.title-letters span:nth-child(3) {
-  animation-delay: 1.0s;
+
+@-webkit-keyframes moveToLeftFade {
+	from { }
+	to { opacity: 0; -webkit-transform: translateX(-100%); }
 }
-.title-letters span:nth-child(4) {
-  animation-delay: 1.5s;
-}
-.title-letters span:nth-child(6) {
-  animation-delay: 2s;
-}
-.title-letters span:nth-child(8) {
-  animation-delay: 2.5s;
-}
-.title-letters span:nth-child(9) {
-  animation-delay: 3s;
-}
-.title-letters span:nth-child(10) {
-  animation-delay: 3.5s;
-}
-.title-letters span:nth-child(11) {
-  animation-delay: 4s;
-}
-.title-letters span:nth-child(12) {
-  animation-delay: 4.5s;
+@keyframes moveToLeftFade {
+	from { }
+	to { opacity: 0; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
 }
 
-@keyframes move {
-  0% {
-    text-shadow: 0 15px 40px rgba(0, 0, 0, 0.33);
-  }
-  50% {
-    transform: translateZ(5px);
-    text-shadow: 0 15px 40px rgba(0, 0, 0, 0.33);
-    color: rgb(110, 177, 216);
-  }
-  100% {
-    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.47);
-  }
+@-webkit-keyframes moveToRightFade {
+	from { }
+	to { opacity: 0; -webkit-transform: translateX(100%); }
 }
-
-*/
-
+@keyframes moveToRightFade {
+	from { }
+	to { opacity: 0; -webkit-transform: translateX(100%); transform: translateX(100%); }
+}
 
