@@ -1,9 +1,5 @@
 $(document).ready(function() {
     
-    $(window).on("load", function() {  
-        $(".content-wrapper").hide().fadeIn(3000);
-    });
-    
   
                   
     $("#home").on("click", function() {
