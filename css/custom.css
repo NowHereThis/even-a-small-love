@@ -147,6 +147,10 @@ h6 {
     height: auto;
 }
 
+.placeholder {
+    box-shadow: 3px 2px 28px #888888;
+}
+
 /*Style for inner pages*/
 
 
@@ -274,15 +278,21 @@ h6 {
 /*Scrolling animations for new pages*/
 
 .move-to-left-fade {
+    -moz-animation: moveToLeftFade .7s ease both;
 	-webkit-animation: moveToLeftFade .7s ease both;
 	animation: moveToLeftFade .7s ease both;
 }
 
 .move-to-right-fade {
+    -moz-animation: moveToRightFade .7s ease both;
 	-webkit-animation: moveToRightFade .7s ease both;
 	animation: moveToRightFade .7s ease both;
 }
 
+@-moz-keyframes moveToLeftFade {
+    from { }
+    to {opacity: 0; -moz-transform: translateX(-100%);}
+}
 
 @-webkit-keyframes moveToLeftFade {
 	from { }
@@ -291,6 +301,11 @@ h6 {
 @keyframes moveToLeftFade {
 	from { }
 	to { opacity: 0; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
+
+@-moz-keyframes moveToRightFade {
+	from { }
+	to { opacity: 0; -moz-transform: translateX(100%); }
 }
 
 @-webkit-keyframes moveToRightFade {
