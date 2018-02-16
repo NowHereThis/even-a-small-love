@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     
     $("#meg").mouseenter(function() {       
         $(this).attr("src", "img/ocallahan01.png");
@@ -40,33 +39,32 @@ $(document).ready(function () {
         $(".ella").attr("src", "img/ordona_placeholder.jpg");
     });
     
-    $(window).on("load", function() {
         
-        var images = ["img/lee01.jpg", "img/lee02.jpg",
-                      "img/lee03.jpg", "img/ocallahan01.png", "img/ordona01.jpg", "img/ordona02.jpg", "img/ordona03.jpg", "img/ordona04.jpg", "img/ordona05.jpg", "img/sato01.jpg"];
+    var images = ["img/lee01.jpg", "img/lee02.jpg",
+                  "img/lee03.jpg", "img/ocallahan01.png", 
+                  "img/ordona01.jpg", "img/ordona02.jpg", 
+                  "img/ordona03.jpg", "img/ordona04.jpg", 
+                  "img/ordona05.jpg", "img/sato01.jpg"];
         
-        $(".content-wrapper").hide().fadeIn();
-        
-        $("#home").on("click", function() {
-            event.preventDefault();
-            newLocation = this.href;
-            $("body").addClass("move-to-right-fade");
-            $("body").fadeOut(1000, newpage);
+    $("#home").on("click", function() {
+        event.preventDefault();
+        newLocation = this.href;
+        $("body").addClass("move-to-right-fade");
+        $("body").fadeOut(1000, newpage);
 
-        });
-
-        $("#about").on("click", function() {
-            event.preventDefault();
-            newLocation = this.href;
-            $("body").addClass("move-to-left-fade");
-            $("body").fadeOut(1000, newpage);
-
-        });
-
-        function newpage() {
-            window.location = newLocation;
-        };
     });
+
+    $("#about").on("click", function() {
+        event.preventDefault();
+        newLocation = this.href;
+        $("body").addClass("move-to-left-fade");
+        $("body").fadeOut(1000, newpage);
+
+    });
+
+    function newpage() {
+        window.location = newLocation;
+    };
     
 });
 
