@@ -247,7 +247,6 @@ body {
 
     .sticky-note-body {
         max-width: 30%; 
-        height: 200px;
     }
     
 }
@@ -344,7 +343,6 @@ body {
 
     .sticky-note-body {
         max-width: 15%; 
-        height: 200px;
     }
 
 }
