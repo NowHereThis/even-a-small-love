@@ -46,7 +46,7 @@ $(document).ready(function () {
                   "img/ordona03.jpg", "img/ordona04.jpg", 
                   "img/ordona05.jpg", "img/sato01.jpg"];
         
-    $("#home").on("click", function() {
+    $(".home").on("click", function() {
         event.preventDefault();
         newLocation = this.href;
         $("body").addClass("move-to-right-fade");

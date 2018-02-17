@@ -64,20 +64,20 @@ body {
     }
 }
 
-a {
+.nav-link a{
 	outline: none;
 	color: #000;
-	text-decoration: none;
 }
 
-a:hover, a:focus {
+.nav-link:hover, a:focus {
 	outline: none;
     text-decoration: none;
 }
 
 .name {
-    text-decoration: underline;
+    color: #899DD9;
 }
+
 
 .sticky-top {
     top: 5%;
@@ -92,7 +92,7 @@ a:hover, a:focus {
 }
 
 .md-buffer {
-    margin-top: 5%;
+    margin-top: 3%;
 }
 
 /*Image classes*/
@@ -155,17 +155,15 @@ a:hover, a:focus {
     
 }
 
-filename {
+.filename {
     text-align: center;
-    font-size: 12px;
 }
-
 
 .textbox-content {
     display: block;
     margin: 0 auto;
     max-width: 90%;
-    padding-top: 1em;
+    padding-top: .75em;
     padding-left: 1em;
     padding-right: 1em;
     border: 1px solid #B5B5B5;
@@ -181,7 +179,31 @@ filename {
 
 .text {
     text-indent: 1.5em;
+    margin-bottom: 0.75rem;
     
+}
+
+.sticky-note-top {
+    background: #6ecef4;
+    max-width: 55%;
+    height: 20px;
+}
+
+.sticky-note-icon {
+    margin-left: -8px;
+    opacity: 0.6;
+}
+
+.sticky-note-body {
+    background: rgba(182, 231, 250, 0.67);
+    padding-top: .75em;
+    max-width: 55%;
+    height: 120px; 
+    box-shadow: 3px 8px 28px #888888;
+}
+
+#main-sticky {
+    height: 75px;
 }
 
 @media (min-width: 768px) {
@@ -207,6 +229,25 @@ filename {
     
     .filename {
         font-size: 18px;
+    }
+    
+    .textbox-bar {
+        max-width: 50%;
+        margin: 0;
+    }
+    
+    .textbox-content {
+        max-width: 50%;
+        margin: 0;
+    }
+    
+    .sticky-note-top {
+        max-width: 30%;
+    }
+
+    .sticky-note-body {
+        max-width: 30%; 
+        height: 200px;
     }
     
 }
@@ -265,10 +306,6 @@ filename {
         text-decoration: none;
         color: #5272d3;
     }
-    
-    .name {
-        text-decoration: none;
-    }
 
     .name:hover {
         color: #97c2ef;
@@ -291,6 +328,23 @@ filename {
     .textbox-content {
         max-width: 50%;
         height: 15em;
+    }
+    
+    #info-header {
+        margin-top: 8%;
+    }
+    
+    #info-box {
+        height: 9em;
+    }
+    
+    .sticky-note-top {
+        max-width: 15%;
+    }
+
+    .sticky-note-body {
+        max-width: 15%; 
+        height: 200px;
     }
 
 }
